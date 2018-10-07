@@ -85,6 +85,7 @@ AppRate = (function() {
     updateCounter();
     if (counter.countdown === AppRate.preferences.usesUntilPrompt || immediately) {
       var base = AppRate.preferences.callbacks;
+      updateCounter('reset');
       if (typeof base.onRateDialogShow === "function") {
         base.onRateDialogShow();
       }
